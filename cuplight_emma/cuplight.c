@@ -18,15 +18,12 @@ int main (void) {
   const float conversion_factor = 3.3f / (1 << 12);
 
   //Variable Defs
-  uint16_t result;
   int count;
 
   //ADC init
   adc_init();
-  // Make sure GPIO is high-impedance, no pullups etc
   adc_gpio_init(ADC_PIN);
-  // Select ADC input 0 (GPIO26)
-  adc_select_input(0);
+  adc_select_input(ADC_CHAN);
 
   //Init PWM functionality for LED dimming
   gpio_set_function(BOARD_LED, GPIO_FUNC_PWM);
@@ -48,6 +45,7 @@ int main (void) {
   while(1) {
     //Wait till interrupt from power on
     sleep_goto_dormant_until_level_high(DOOR_GPIO);
+    //sleep_ms(1000);
     gpio_put(LED_GPIO, 1);
 
     //Check ADC input for brightness
@@ -61,14 +59,14 @@ int main (void) {
     //Wait till door closes
     while(gpio_get(DOOR_GPIO)!=0){
       //Constantly check for brightness and adjust as required.
-      //result = adc_read();
-      //pwm_set_chan_level(slice_num, PWM_CHAN_B, result);
-      //sleep_ms(150);
+      uint16_t brightness = adc_read();
+      pwm_set_chan_level(slice_num, PWM_CHAN_B, brightness);
+      sleep_ms(50);
     }
 
     //Dim lights over 1 seconds
     for(count = 20; count>0; count--) {
-      pwm_set_gpio_level(BOARD_LED, 200*count);
+      pwm_set_chan_level(slice_num, PWM_CHAN_B, 200*count);
       sleep_ms(50);
     }
     gpio_put(LED_GPIO, 0);
