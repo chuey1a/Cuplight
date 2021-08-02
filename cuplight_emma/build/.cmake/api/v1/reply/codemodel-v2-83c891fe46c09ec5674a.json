@@ -1291,7 +1291,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-32b67c8af49e4cb23367.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-8e090971a34cd187becd.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
@@ -1326,7 +1326,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "cuplight::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-cuplight-Debug-65ce278d67fdd8c0fd24.json",
+					"jsonFile" : "target-cuplight-Debug-a7f8307d60964d633269.json",
 					"name" : "cuplight",
 					"projectIndex" : 0
 				},
