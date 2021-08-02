@@ -32,8 +32,8 @@ int main (void) {
   gpio_set_function(BOARD_LED, GPIO_FUNC_PWM);
   uint slice_num = pwm_gpio_to_slice_num(BOARD_LED);
 
-  pwm_set_wrap(slice_num, 255);
-  pwm_set_chan_level(slice_num, PWM_CHAN_A, 255);
+  pwm_set_wrap(slice_num, 4095);
+  pwm_set_chan_level(slice_num, PWM_CHAN_B, 0);
   pwm_set_enabled(slice_num, true);
 
   //Init GPIO pins
@@ -55,20 +55,20 @@ int main (void) {
 
     //Fade lights on in 200 milliseconds
     for(count = 0; count<10; count++) {
-      pwm_set_chan_level(slice_num, PWM_CHAN_A, 40*count);
+      pwm_set_chan_level(slice_num, PWM_CHAN_B, 400*count);
       sleep_ms(20);
     }
     //Wait till door closes
     while(gpio_get(DOOR_GPIO)!=0){
       //Constantly check for brightness and adjust as required.
-      result = adc_read();
-      pwm_set_chan_level(slice_num, PWM_CHAN_A, result);
+      //result = adc_read();
+      //pwm_set_chan_level(slice_num, PWM_CHAN_B, result);
       //sleep_ms(150);
     }
 
     //Dim lights over 1 seconds
     for(count = 20; count>0; count--) {
-      pwm_set_gpio_level(BOARD_LED, 20*count);
+      pwm_set_gpio_level(BOARD_LED, 200*count);
       sleep_ms(50);
     }
     gpio_put(LED_GPIO, 0);
