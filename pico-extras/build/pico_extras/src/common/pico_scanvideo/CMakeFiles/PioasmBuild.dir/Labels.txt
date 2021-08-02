@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild-complete.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/Users/chuey/pico/pico-extras/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule

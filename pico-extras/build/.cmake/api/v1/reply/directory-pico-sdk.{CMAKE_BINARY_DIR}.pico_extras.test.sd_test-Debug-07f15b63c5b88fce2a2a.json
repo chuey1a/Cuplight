@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "pico-sdk/{CMAKE_BINARY_DIR}/pico_extras/test/sd_test",
+		"source" : "test/sd_test"
+	}
+}

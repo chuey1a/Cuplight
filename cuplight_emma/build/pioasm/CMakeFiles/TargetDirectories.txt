@@ -1,0 +1,3 @@
+/Users/chuey/pico/cuplight_emma/build/pioasm/CMakeFiles/rebuild_cache.dir
+/Users/chuey/pico/cuplight_emma/build/pioasm/CMakeFiles/edit_cache.dir
+/Users/chuey/pico/cuplight_emma/build/pioasm/CMakeFiles/pioasm.dir

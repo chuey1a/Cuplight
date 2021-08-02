@@ -1,0 +1,6 @@
+{
+  "cmake.environment": {
+    "PICO_SDK_PATH":"../../pico-sdk",
+    "PICO_EXTRAS_PATH":"../../pico-extras"
+  },
+}

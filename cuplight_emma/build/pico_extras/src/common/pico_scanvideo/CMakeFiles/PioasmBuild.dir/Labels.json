@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild-complete.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule"
+		},
+		{
+			"file" : "/Users/chuey/pico/cuplight_emma/build/pico_extras/src/common/pico_scanvideo/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"PioasmBuild"
+		],
+		"name" : "PioasmBuild"
+	}
+}
