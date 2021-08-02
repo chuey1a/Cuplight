@@ -12,10 +12,11 @@ pico_sdk_init()
 
 #Create executable target from a source file
 add_executable(cuplight cuplight.c)
+pico_enable_stdio_usb(cuplight 1)
 
 
 #Specify libraries to include
-target_link_libraries(cuplight pico_stdlib hardware_sleep hardware_rtc hardware_pwm)
+target_link_libraries(cuplight pico_stdlib hardware_sleep hardware_rtc hardware_pwm hardware_adc)
 
 #Generate all file formats
 pico_add_extra_outputs(cuplight)
