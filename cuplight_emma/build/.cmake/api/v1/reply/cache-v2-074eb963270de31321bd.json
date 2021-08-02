@@ -195,7 +195,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/chuey/pico/pico-extras/build"
+			"value" : "/Users/chuey/pico/cuplight_emma/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -407,10 +407,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/local/bin/arm-none-eabi-gcc-9.3.1"
 		},
 		{
@@ -715,7 +715,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/chuey/pico/pico-extras"
+			"value" : "/Users/chuey/pico/cuplight_emma"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -867,7 +867,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "92"
+			"value" : "90"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -947,7 +947,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "pico_extras"
+			"value" : "cuplight_emma_project"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1451,7 +1451,11 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : " /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs"
+<<<<<<< HEAD:cuplight_emma/build/.cmake/api/v1/reply/cache-v2-074eb963270de31321bd.json
+			"value" : " /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs"
+=======
+			"value" : " /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs /Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs"
+>>>>>>> 1df6fba (Add PWM but need to fix ADC blocking.):cuplight_emma/build/.cmake/api/v1/reply/cache-v2-441e69ce7329b07c8bd8.json
 		},
 		{
 			"name" : "PICO_DOXYGEN_PATHS",
@@ -1466,12 +1470,36 @@
 			"value" : " /Users/chuey/pico/pico-sdk/src/common /Users/chuey/pico/pico-sdk/src/rp2_common /Users/chuey/pico/pico-sdk/src/rp2040"
 		},
 		{
+			"name" : "PICO_EXTRAS_FETCH_FROM_GIT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Set to ON to fetch copy of PICO EXTRAS from git if not otherwise locatable"
+				}
+			],
+			"type" : "BOOL",
+			"value" : ""
+		},
+		{
+			"name" : "PICO_EXTRAS_FETCH_FROM_GIT_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "location to download EXTRAS"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
 			"name" : "PICO_EXTRAS_PATH",
 			"properties" : 
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to Pico Extras"
+					"value" : "Path to the PICO EXTRAS"
 				}
 			],
 			"type" : "PATH",
@@ -1682,6 +1710,42 @@
 			"value" : "34301f42ec64d06f4d56c82666da93b7"
 		},
 		{
+			"name" : "cuplight_emma_project_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/chuey/pico/cuplight_emma/build"
+		},
+		{
+			"name" : "cuplight_emma_project_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "cuplight_emma_project_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/chuey/pico/cuplight_emma"
+		},
+		{
 			"name" : "pico_extras_BINARY_DIR",
 			"properties" : 
 			[
@@ -1691,7 +1755,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/chuey/pico/pico-extras/build"
+			"value" : "/Users/chuey/pico/cuplight_emma/build/pico_extras"
 		},
 		{
 			"name" : "pico_extras_IS_TOP_LEVEL",
@@ -1703,7 +1767,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "ON"
+			"value" : "OFF"
 		},
 		{
 			"name" : "pico_extras_SOURCE_DIR",
@@ -1727,7 +1791,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/chuey/pico/pico-extras/build/pico-sdk"
+			"value" : "/Users/chuey/pico/cuplight_emma/build/pico-sdk"
 		},
 		{
 			"name" : "pico_sdk_IS_TOP_LEVEL",

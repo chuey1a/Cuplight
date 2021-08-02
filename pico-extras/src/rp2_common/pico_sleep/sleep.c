@@ -69,8 +69,8 @@ void sleep_run_from_dormant_source(dormant_source_t dormant_source) {
     clock_stop(clk_adc);
 
     // CLK RTC = ideally XOSC (12MHz) / 256 = 46875Hz but could be rosc
-    uint clk_rtc_src = (dormant_source == DORMANT_SOURCE_XOSC) ? 
-                       CLOCKS_CLK_RTC_CTRL_AUXSRC_VALUE_XOSC_CLKSRC : 
+    uint clk_rtc_src = (dormant_source == DORMANT_SOURCE_XOSC) ?
+                       CLOCKS_CLK_RTC_CTRL_AUXSRC_VALUE_XOSC_CLKSRC :
                        CLOCKS_CLK_RTC_CTRL_AUXSRC_VALUE_ROSC_CLKSRC_PH;
 
     clock_configure(clk_rtc,

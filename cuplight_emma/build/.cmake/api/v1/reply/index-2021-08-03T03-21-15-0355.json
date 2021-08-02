@@ -1,0 +1,118 @@
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "Ninja"
+		},
+		"paths" : 
+		{
+			"cmake" : "/usr/local/Cellar/cmake/3.21.0/bin/cmake",
+			"cpack" : "/usr/local/Cellar/cmake/3.21.0/bin/cpack",
+			"ctest" : "/usr/local/Cellar/cmake/3.21.0/bin/ctest",
+			"root" : "/usr/local/Cellar/cmake/3.21.0/share/cmake"
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 3,
+			"minor" : 21,
+			"patch" : 0,
+			"string" : "3.21.0",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+			"jsonFile" : "codemodel-v2-fe66a6118414dae0b3e9.json",
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 3
+			}
+		},
+		{
+<<<<<<< HEAD:cuplight_emma/build/.cmake/api/v1/reply/index-2021-08-03T03-21-15-0355.json
+			"jsonFile" : "cache-v2-074eb963270de31321bd.json",
+=======
+			"jsonFile" : "cache-v2-441e69ce7329b07c8bd8.json",
+>>>>>>> 1df6fba (Add PWM but need to fix ADC blocking.):cuplight_emma/build/.cmake/api/v1/reply/index-2021-08-03T03-00-12-0293.json
+			"kind" : "cache",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 0
+			}
+		},
+		{
+			"jsonFile" : "toolchains-v1-6341791b1185fcede08d.json",
+			"kind" : "toolchains",
+			"version" : 
+			{
+				"major" : 1,
+				"minor" : 0
+			}
+		}
+	],
+	"reply" : 
+	{
+		"client-vscode" : 
+		{
+			"query.json" : 
+			{
+				"requests" : 
+				[
+					{
+						"kind" : "cache",
+						"version" : 2
+					},
+					{
+						"kind" : "codemodel",
+						"version" : 2
+					},
+					{
+						"kind" : "toolchains",
+						"version" : 1
+					}
+				],
+				"responses" : 
+				[
+					{
+<<<<<<< HEAD:cuplight_emma/build/.cmake/api/v1/reply/index-2021-08-03T03-21-15-0355.json
+						"jsonFile" : "cache-v2-074eb963270de31321bd.json",
+=======
+						"jsonFile" : "cache-v2-441e69ce7329b07c8bd8.json",
+>>>>>>> 1df6fba (Add PWM but need to fix ADC blocking.):cuplight_emma/build/.cmake/api/v1/reply/index-2021-08-03T03-00-12-0293.json
+						"kind" : "cache",
+						"version" : 
+						{
+							"major" : 2,
+							"minor" : 0
+						}
+					},
+					{
+						"jsonFile" : "codemodel-v2-fe66a6118414dae0b3e9.json",
+						"kind" : "codemodel",
+						"version" : 
+						{
+							"major" : 2,
+							"minor" : 3
+						}
+					},
+					{
+						"jsonFile" : "toolchains-v1-6341791b1185fcede08d.json",
+						"kind" : "toolchains",
+						"version" : 
+						{
+							"major" : 1,
+							"minor" : 0
+						}
+					}
+				]
+			}
+		}
+	}
+}

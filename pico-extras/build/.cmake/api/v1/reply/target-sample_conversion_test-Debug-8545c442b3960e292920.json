@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "pico-sdk/{CMAKE_BINARY_DIR}/pico_extras/test/sd_test/sd_test.elf"
+			"path" : "pico-sdk/{CMAKE_BINARY_DIR}/pico_extras/test/sample_conversion_test/sample_conversion_test.elf"
 		}
 	],
 	"backtrace" : 1,
@@ -13,22 +13,20 @@
 			"add_executable",
 			"target_link_libraries",
 			"add_dependencies",
-			"pico_define_boot_stage2",
-			"pico_generate_pio_header",
 			"find_package",
 			"pico_add_uf2_output",
 			"pico_add_extra_outputs",
+			"pico_define_boot_stage2",
 			"add_compile_options",
 			"target_compile_definitions"
 		],
 		"files" : 
 		[
-			"test/sd_test/CMakeLists.txt",
-			"/Users/chuey/pico/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt",
-			"/Users/chuey/pico/pico-sdk/tools/CMakeLists.txt",
-			"src/rp2_common/pico_sd_card/CMakeLists.txt",
+			"test/sample_conversion_test/CMakeLists.txt",
 			"/Users/chuey/pico/pico-sdk/tools/FindELF2UF2.cmake",
+			"/Users/chuey/pico/pico-sdk/tools/CMakeLists.txt",
 			"/Users/chuey/pico/pico-sdk/src/rp2_common.cmake",
+			"/Users/chuey/pico/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt",
 			"/Users/chuey/pico/pico-sdk/CMakeLists.txt"
 		],
 		"nodes" : 
@@ -39,87 +37,72 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 3,
+				"line" : 2,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 12,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
-				"file" : 1
-			},
-			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 99,
-				"parent" : 3
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 73,
-				"parent" : 4
-			},
-			{
-				"file" : 3
+				"command" : 5,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 3,
-				"line" : 4,
+				"line" : 45,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 40,
+				"parent" : 4
+			},
+			{
+				"file" : 1,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 41,
 				"parent" : 6
 			},
 			{
-				"command" : 2,
-				"file" : 2,
-				"line" : 28,
-				"parent" : 7
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 13,
-				"parent" : 0
+				"file" : 4
 			},
 			{
 				"command" : 6,
-				"file" : 5,
-				"line" : 45,
-				"parent" : 9
-			},
-			{
-				"command" : 5,
-				"file" : 2,
-				"line" : 40,
-				"parent" : 10
-			},
-			{
 				"file" : 4,
-				"parent" : 11
+				"line" : 99,
+				"parent" : 8
 			},
 			{
 				"command" : 2,
 				"file" : 4,
-				"line" : 41,
-				"parent" : 12
+				"line" : 73,
+				"parent" : 9
 			},
 			{
-				"file" : 6
+				"file" : 5
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 11
 			},
 			{
 				"command" : 8,
-				"file" : 6,
-				"line" : 36,
-				"parent" : 14
-			},
-			{
-				"command" : 9,
-				"file" : 5,
+				"file" : 3,
 				"line" : 28,
-				"parent" : 9
+				"parent" : 3
 			}
 		]
 	},
@@ -132,774 +115,7 @@
 					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
 				},
 				{
-					"backtrace" : 15,
-					"fragment" : "-Winline"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-ffunction-sections"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-fdata-sections"
-				},
-				{
-					"fragment" : "-std=gnu11"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_BIT_OPS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_BIT_OPS_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DIVIDER=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DIVIDER_HARDWARE=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DOUBLE=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DOUBLE_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_FLOAT=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_FLOAT_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_INT64_OPS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_INT64_OPS_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_MALLOC=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_MEM_OPS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_MEM_OPS_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_PLATFORM=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_PRINTF=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_PRINTF_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_RUNTIME=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STANDARD_LINK=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STDIO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STDIO_UART=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STDLIB=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_CORE=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_CRITICAL_SECTION=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_MUTEX=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_SEM=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_TIME=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_UTIL=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_BOARD=\"pico\""
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_BUILD=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_COPY_TO_RAM=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_CXX_ENABLE_EXCEPTIONS=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_EXTRAS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_NO_FLASH=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_NO_HARDWARE=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_ON_DEVICE=1"
-				},
-				{
-					"backtrace" : 16,
-					"define" : "PICO_TARGET_NAME=\"sd_test\""
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_USE_BLOCKED_RAM=0"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_stdlib/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_base/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/build/generated/pico_base"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/boards/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_platform/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_base/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_structs/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_claim/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_sync/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_uart/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_divider/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_time/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_timer/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_runtime/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_irq/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_resets/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pll/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_vreg/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_watchdog/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_printf/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_bootrom/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_bit_ops/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_divider/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_int64_ops/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_malloc/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/boot_stage2/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_binary_info/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/build/pico_extras/src/rp2_common/pico_sd_card"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/src/rp2_common/pico_sd_card/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_sd_card/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_dma/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pio/include"
-				}
-			],
-			"language" : "C",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "11"
-			},
-			"sourceIndexes" : 
-			[
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17,
-				18,
-				19,
-				20,
-				22,
-				23,
-				24,
-				25,
-				26,
-				28,
-				31,
-				32,
-				36,
-				37,
-				39,
-				43,
-				44,
-				45,
-				46,
-				47,
-				48
-			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
-				},
-				{
-					"backtrace" : 15,
-					"fragment" : "-Winline"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-ffunction-sections"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-fdata-sections"
-				}
-			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_BIT_OPS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_BIT_OPS_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DIVIDER=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DIVIDER_HARDWARE=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DOUBLE=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_DOUBLE_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_FLOAT=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_FLOAT_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_INT64_OPS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_INT64_OPS_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_MALLOC=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_MEM_OPS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_MEM_OPS_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_PLATFORM=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_PRINTF=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_PRINTF_PICO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_RUNTIME=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STANDARD_LINK=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STDIO=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STDIO_UART=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_STDLIB=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_CORE=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_CRITICAL_SECTION=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_MUTEX=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_SYNC_SEM=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_TIME=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "LIB_PICO_UTIL=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_BOARD=\"pico\""
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_BUILD=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_COPY_TO_RAM=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_CXX_ENABLE_EXCEPTIONS=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_EXTRAS=1"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_NO_FLASH=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_NO_HARDWARE=0"
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_ON_DEVICE=1"
-				},
-				{
-					"backtrace" : 16,
-					"define" : "PICO_TARGET_NAME=\"sd_test\""
-				},
-				{
-					"backtrace" : 2,
-					"define" : "PICO_USE_BLOCKED_RAM=0"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_stdlib/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_base/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/build/generated/pico_base"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/boards/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_platform/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_base/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_structs/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_claim/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_sync/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_uart/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_divider/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_time/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_timer/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_runtime/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_irq/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_resets/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pll/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_vreg/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_watchdog/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_printf/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_bootrom/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_bit_ops/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_divider/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_int64_ops/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_malloc/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/boot_stage2/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_binary_info/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/build/pico_extras/src/rp2_common/pico_sd_card"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/src/rp2_common/pico_sd_card/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_sd_card/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_dma/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pio/include"
-				}
-			],
-			"language" : "ASM",
-			"sourceIndexes" : 
-			[
-				7,
-				21,
-				27,
-				29,
-				30,
-				33,
-				34,
-				35,
-				38,
-				40,
-				41
-			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
-				},
-				{
-					"backtrace" : 15,
+					"backtrace" : 12,
 					"fragment" : "-Winline"
 				},
 				{
@@ -1081,8 +297,8 @@
 					"define" : "PICO_ON_DEVICE=1"
 				},
 				{
-					"backtrace" : 16,
-					"define" : "PICO_TARGET_NAME=\"sd_test\""
+					"backtrace" : 13,
+					"define" : "PICO_TARGET_NAME=\"sample_conversion_test\""
 				},
 				{
 					"backtrace" : 2,
@@ -1241,23 +457,11 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/build/pico_extras/src/rp2_common/pico_sd_card"
+					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_audio/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/src/rp2_common/pico_sd_card/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_sd_card/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_dma/include"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_util_buffer/include"
 				}
 			],
 			"language" : "CXX",
@@ -1271,26 +475,765 @@
 			},
 			"sourceIndexes" : 
 			[
-				42
+				0,
+				42,
+				46
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Winline"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"fragment" : "-std=gnu11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_BIT_OPS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_BIT_OPS_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DIVIDER=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DIVIDER_HARDWARE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DOUBLE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DOUBLE_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_FLOAT=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_FLOAT_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_INT64_OPS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_INT64_OPS_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_MALLOC=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_MEM_OPS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_MEM_OPS_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_PLATFORM=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_PRINTF=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_PRINTF_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_RUNTIME=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STANDARD_LINK=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STDIO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STDIO_UART=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STDLIB=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_CORE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_CRITICAL_SECTION=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_MUTEX=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_SEM=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_TIME=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_UTIL=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_BOARD=\"pico\""
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_BUILD=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_COPY_TO_RAM=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_CXX_ENABLE_EXCEPTIONS=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_EXTRAS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_NO_FLASH=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_NO_HARDWARE=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_ON_DEVICE=1"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "PICO_TARGET_NAME=\"sample_conversion_test\""
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_USE_BLOCKED_RAM=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_stdlib/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_base/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-extras/build/generated/pico_base"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/boards/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_platform/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_base/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_structs/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_claim/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_sync/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_divider/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_time/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_timer/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_runtime/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_irq/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_resets/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pll/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_vreg/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_watchdog/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_printf/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_bootrom/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_bit_ops/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_divider/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_int64_ops/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_malloc/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/boot_stage2/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_binary_info/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_audio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_util_buffer/include"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				22,
+				23,
+				24,
+				25,
+				26,
+				28,
+				31,
+				32,
+				36,
+				37,
+				39,
+				43,
+				44,
+				45,
+				48
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-Winline"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-fdata-sections"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_BIT_OPS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_BIT_OPS_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DIVIDER=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DIVIDER_HARDWARE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DOUBLE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_DOUBLE_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_FLOAT=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_FLOAT_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_INT64_OPS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_INT64_OPS_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_MALLOC=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_MEM_OPS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_MEM_OPS_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_PLATFORM=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_PRINTF=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_PRINTF_PICO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_RUNTIME=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STANDARD_LINK=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STDIO=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STDIO_UART=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_STDLIB=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_CORE=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_CRITICAL_SECTION=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_MUTEX=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_SYNC_SEM=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_TIME=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LIB_PICO_UTIL=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_BOARD=\"pico\""
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_BUILD=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_COPY_TO_RAM=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_CXX_ENABLE_EXCEPTIONS=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_EXTRAS=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_NO_FLASH=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_NO_HARDWARE=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_ON_DEVICE=1"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "PICO_TARGET_NAME=\"sample_conversion_test\""
+				},
+				{
+					"backtrace" : 2,
+					"define" : "PICO_USE_BLOCKED_RAM=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_stdlib/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_base/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-extras/build/generated/pico_base"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/boards/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_platform/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_regs/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_base/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2040/hardware_structs/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_claim/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_sync/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_divider/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_time/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_timer/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_runtime/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_irq/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_resets/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pll/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_vreg/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_watchdog/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_printf/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_bootrom/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_bit_ops/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_divider/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_int64_ops/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_malloc/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/boot_stage2/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_binary_info/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_audio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/chuey/pico/pico-extras/src/common/pico_util_buffer/include"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				7,
+				21,
+				27,
+				29,
+				30,
+				33,
+				34,
+				35,
+				38,
+				40,
+				41,
+				47
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 5,
-			"id" : "bs2_default_padded_checksummed_asm::@bc554eaed616d198a22d"
-		},
-		{
-			"backtrace" : 8,
-			"id" : "pico_sd_card_sd_card_pio_h::@0b1f3129c9fb6ae3f142"
-		},
-		{
-			"backtrace" : 13,
+			"backtrace" : 7,
 			"id" : "ELF2UF2Build::@086c489e7510a929d5cb"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "bs2_default_padded_checksummed_asm::@bc554eaed616d198a22d"
 		}
 	],
-	"id" : "sd_test::@36cd8440b32448a82c18",
+	"id" : "sample_conversion_test::@086c489e7510a929d5cb",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -2070,7 +2013,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-Wl,-Map=sd_test.elf.map",
+				"fragment" : "-Wl,-Map=sample_conversion_test.elf.map",
 				"role" : "flags"
 			},
 			{
@@ -2115,12 +2058,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "sd_test",
-	"nameOnDisk" : "sd_test.elf",
+	"name" : "sample_conversion_test",
+	"nameOnDisk" : "sample_conversion_test.elf",
 	"paths" : 
 	{
-		"build" : "pico-sdk/{CMAKE_BINARY_DIR}/pico_extras/test/sd_test",
-		"source" : "test/sd_test"
+		"build" : "pico-sdk/{CMAKE_BINARY_DIR}/pico_extras/test/sample_conversion_test",
+		"source" : "test/sample_conversion_test"
 	},
 	"sourceGroups" : 
 	[
@@ -2164,7 +2107,6 @@
 				44,
 				45,
 				46,
-				47,
 				48
 			]
 		},
@@ -2182,7 +2124,8 @@
 				35,
 				38,
 				40,
-				41
+				41,
+				47
 			]
 		}
 	],
@@ -2191,295 +2134,295 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test/sd_test/sd_test.c",
+			"path" : "test/sample_conversion_test/sample_conversion_test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_platform/platform.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_time/time.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_time/timeout_helper.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/sem.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/lock_core.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/mutex.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_sync/critical_section.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/datetime.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/pheap.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/common/pico_util/queue.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_printf/printf.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_divider/divider.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/double_math.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/float_math.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 1,
+			"compileGroupIndex" : 2,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 2,
+			"compileGroupIndex" : 0,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/rp2_common/pico_sd_card/sd_card.c",
+			"path" : "src/common/pico_audio/audio.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c",
-			"sourceGroupIndex" : 0
+			"compileGroupIndex" : 2,
+			"path" : "src/common/pico_audio/audio_utils.S",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "/Users/chuey/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c",
+			"compileGroupIndex" : 1,
+			"path" : "src/common/pico_util_buffer/buffer.c",
 			"sourceGroupIndex" : 0
 		}
 	],
