@@ -20,7 +20,8 @@ if (TARGET tinyusb_device)
 
     #Specify libraries to include
     target_link_libraries(cuplight pico_stdlib hardware_sleep hardware_rtc)
-    target_link_libraries(cuplight hardware_pwm hardware_adc hardware_gpio)
+    target_link_libraries(cuplight hardware_pwm hardware_gpio)
+    target_link_libraries(cuplight hardware_clocks)
 
     #Generate all file formats
     pico_add_extra_outputs(cuplight)
